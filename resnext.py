@@ -4,15 +4,14 @@
 '''
 from tensorflow.keras.models import Model
 
-from tensorflow.keras.layers import Dense
-from tensorflow.keras.layers import Lambda
-from tensorflow.keras.layers import Activation
-from tensorflow.keras.layers import Conv2D
-from tensorflow.keras.layers import BatchNormalization
-from tensorflow.keras.layers import GlobalAveragePooling2D
-from tensorflow.keras.layers import Input
-from tensorflow.keras.layers import Add
-from tensorflow.keras.layers import Reshape
+from tensorflow.keras.layers import (
+    Dense, Lambda, Activation, Conv2D,
+    BatchNormalization,
+    GlobalAveragePooling2D, GlobalMaxPooling2D,
+    MaxPooling2D,
+    Input,
+    Add, concatenate
+)
 
 from tensorflow.keras.regularizers import l2
 from tensorflow.keras import backend as K
