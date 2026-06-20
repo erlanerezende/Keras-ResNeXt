@@ -2,25 +2,22 @@
 # Reference
 - [Aggregated Residual Transformations for Deep Neural Networks](https://arxiv.org/pdf/1611.05431.pdf))
 '''
-from __future__ import print_function
-from __future__ import absolute_import
-from __future__ import division
+from tensorflow.keras.models import Model
+
+from tensorflow.keras.layers import Dense
+from tensorflow.keras.layers import Lambda
+from tensorflow.keras.layers import Activation
+from tensorflow.keras.layers import Conv2D
+from tensorflow.keras.layers import BatchNormalization
+from tensorflow.keras.layers import GlobalAveragePooling2D
+from tensorflow.keras.layers import Input
+from tensorflow.keras.layers import Add
+from tensorflow.keras.layers import Reshape
+
+from tensorflow.keras.regularizers import l2
+from tensorflow.keras import backend as K
 
 import warnings
-
-from keras.models import Model
-from keras.layers.core import Dense, Lambda
-from keras.layers.core import Activation
-from keras.layers.convolutional import Conv2D
-from keras.layers.pooling import GlobalAveragePooling2D, GlobalMaxPooling2D, MaxPooling2D
-from keras.layers import Input
-from keras.layers.merge import concatenate, add
-from keras.layers.normalization import BatchNormalization
-from keras.regularizers import l2
-from keras.utils.layer_utils import convert_all_kernels_in_model
-from keras.utils.data_utils import get_file
-from keras.engine.topology import get_source_inputs
-from keras_applications.imagenet_utils import _obtain_input_shape
 import keras.backend as K
 
 CIFAR_TH_WEIGHTS_PATH = ''
