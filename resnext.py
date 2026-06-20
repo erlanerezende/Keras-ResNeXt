@@ -18,7 +18,6 @@ from tensorflow.keras.regularizers import l2
 from tensorflow.keras import backend as K
 
 import warnings
-import keras.backend as K
 
 CIFAR_TH_WEIGHTS_PATH = ''
 CIFAR_TF_WEIGHTS_PATH = ''
